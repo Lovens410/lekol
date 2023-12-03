@@ -1,27 +1,75 @@
-let nonbOdinate = Math.floor(Math.random() * (500 - 1 + 1) + 1) // entèval [1 - 500]
-//alert(nonbOdinate) //pou afiche nom odinatè a
+
+
+let atisYo = new Array("BIC", "Belo", "Tifane", "Emeline Michel")
+console.log(atisYo)
+let atis1 = atisYo[0]
+let atis2 = atisYo[1]
+let atis3 = atisYo[2]
+
+
+let rules = [
+	"is a guest",
+	"is admin",
+	"is supervisor",
+	"is secretary"
+	]
+
+
+rules[2] = "Director"
+console.log(rules)
+
+let idx = rules.findIndex(el => el === "is admin")
+console.log(idx)
+let idx1 = atisYo.findIndex(el => el === "BIC")
+console.log(idx1)
+
+
+let atisYo1 = new Array("BIC", "Belo", "Tifane", "Emeline Michel")
+console.log(atisYo1)
+atisYo1.join("-")
+
+let chenn = "1 2 3 4"
+console.log(chenn)
+chennDekoupe = chenn.split(" ")
+console.log(chennDekoupe)
+
+nouvoChenn = chennDekoupe.join("-")
+console.log(nouvoChenn)
+
+let zile = ["Zile Lagonav", "Zile Kayimit", "Ilavach"]
 
 
 
-let chans = 5 // kantite chans itilizatè a genyen
-do {
-	let nonbChwazi =parseInt(prompt("Ki nonb ou chwazi itlizatè ?"))  // mande itilizatè a antre yon nomb
-	if(nonbOdinate === nonbChwazi)
-	{
-		console.log("Bravo, ou genyen")
-	}else if(nonbOdinate > nonbChwazi){
-		console.log("Dezole, nonb ou chwazi a pi piti. Eseye anko, ou rete " + chans  + " chans")
+ zileYo = zile.concat("Latoti")
+  zileYo.sort()
+  zileYo.reverse()
+ console.log(zileYo)
+
+
+ function diferans(num1, num2){
+ 	return num1 - num2
+ }
+
+ let tabloLaj = [100, 42, 25, 65, 22, 13]
+
+console.log(tabloLaj)
+ tabloLaj.sort(diferans)
+ console.log(tabloLaj)
+
+
+let tablo = [100, 42, 25, 65, 22, 13]
+ /*
+console.log(tablo)
+let maxVal = tablo[0]
+
+for(let i = 0; i < tablo.length; i++){
+	if(tablo[i] > maxVal){
+		 maxVal = tablo[i]
 	}
-	else {
-		console.log("Dezole, nonb ou chwazi a pi gran. Eseye anko, ou rete " + chans  + " chans")
-	}
+	
+}console.log(`Pi gran valè a se ${maxVal}`)
 
-	chans --         //dekremantasyon chans itilizatè a aprè chak esèy
-}while(chans > 0)
+*/
 
-if(chans === 0)      // kondisyon pou itilizatè a paka kontinye jwe
-   {
-	console.log("Dezole, ou pa rive genyen. Nonb lan se: " + nonbOdinate) 
-   }
-   
-
+ let minVal = Math.min.apply(null, tablo)
+  let maxVal = Math.max.apply(null, tablo)
